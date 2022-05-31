@@ -1,0 +1,256 @@
+/* Site Stylesheet
+  1. Global Styles
+  2. Typography Styles
+  3. Structure Styles
+  4. Component Styles
+  5. Page Styles
+======================================== */
+
+/* 1. Global Styles
+======================================== */
+* {
+    box-sizing: border-box;
+}
+  
+html {
+    margin: 0 0;
+    overflow-x: hidden;
+    width: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0 0;
+    overflow-x: hidden;
+    width: 100%;
+    text-rendering: optimizeLegibility;
+    background-color: #212a2c;
+}
+
+ /* 2. Typography Styles
+  ======================================== */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /*font-family: 'Quicksand';*/
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 15px;
+    /*transition: font-size 0.25s ease;*/
+  }
+  h1 {
+    font-size: calc(100px / 1.5);
+    line-height: 0.85;
+  }
+  h2 {
+    font-size: calc(65px / 1.5);
+    margin-top: 10px;
+    line-height: 0.85;
+  }
+
+  @media(min-width: 720px) {
+    h1 {
+      font-size: calc(65px / 1.25);
+    }
+    h2 {
+      font-size: calc(65px / 1.25);
+    }
+  }
+  @media(min-width: 1024px) {
+    h1 {
+      font-size: 100px;
+    }
+    h2 {
+      font-size: 60px;
+    }
+  }
+  p {
+    /*font-family: 'Quicksand', sans-serif;*/
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 15px;
+  }
+  a {
+    /*font-family: 'Poiret One', cursive;*/
+    font-size: 22px;
+    color:hsl(0, 100%, 65%);
+    text-shadow: 1.5px 1.5px black;
+    font-weight: 700;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: yellow;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    /*font-family: 'Open Sans', Helvetica, sans-serif;*/
+    font-size: 16px;
+    line-height: 23px;
+    list-style: none;
+  }
+
+  /* 3. Structure Styles
+  ======================================== */
+
+  nav {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 30px 1em;
+  }
+
+  .container {
+    margin: 0 0;
+    max-width: 100%;
+    padding: 0 7%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) ) ;
+    grid-auto-rows: 500px;
+    row-gap: 50px;
+  }
+
+  .project-left, .project-right {
+    /*width: 100%;*/
+    border: 4px solid #fffa86;
+    border-radius: 70px; 
+  }
+
+  .paragraph-container {
+      display: flex;
+      max-height: 30%;
+      padding: 0% 9%; 
+      margin-bottom: 10%;
+      overflow: hidden;
+  }
+
+  .paragraph-container p {
+      overflow-y: scroll;
+  }
+
+  .project-left img, .project-right img {
+    border-radius: 70px 70px 0 0;
+  }
+
+  .project-left {
+      grid-column: 1 / span 7;
+  }
+
+  .project-right {
+      grid-column: span 7 / -1;
+  }
+
+  @media(max-width: 720px) {
+      .container {
+        grid-auto-rows: 300px;
+      }
+
+      .project-left {
+        grid-column: 1 / span 5;
+      }
+
+      .project-right {
+        grid-column: span 5 / -1;
+      }
+     
+  }
+
+  @media(max-width: 1024px) {
+      .container {
+        grid-auto-rows: 400px;
+      }
+
+      .project-left {
+        grid-column: 1 / span 6;
+      }
+
+      .project-right {
+        grid-column: span 6 / -1;
+      }
+  }
+
+  .site-header {
+    display: inline-block;
+    float: right;
+    margin-bottom: 15px;
+  }
+  .site-header li,
+  .footer li {
+    display: inline;
+  }
+  .site-header li a {
+    text-decoration: none;
+    margin-left: 20px;
+  }
+
+
+ /* 4. Component Styles
+  ======================================== */  
+
+ /* 5. Page Styles
+  ======================================== */
+  .photo-hero {
+    min-height: 700px;
+  }
+  .photo-hero-text {  
+    padding: 0 20px;
+  }
+  .photo-hero h1 {
+    color: #cccdff;
+    text-shadow: 3px 3px black;
+    margin: 1em 0 40px;;
+  }
+  
+  .photo-hero p {
+    color: #cccdff;
+    text-shadow: 1.5px 1.5px black;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+  
+  .paragraph-container p {
+    color: #ffd27d;
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .photo-grid {
+   
+  }
+
+
+  footer {
+    /*font-family: "Open Sans", Helvetica, sans-serif;*/
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+  } 
+
+  @media(max-width: 720px) {
+
+    .paragraph-container p {
+        font-size: 18px;
+    }
+  }
+
+  @media(max-width: 1024px) {
+
+    .paragraph-container p {
+        font-size: 22px;
+    }
+  }
+    
+  
+
+
+  
